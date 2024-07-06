@@ -1,0 +1,8 @@
+.hero-section {
+  background-image: url("../assets/images/hero-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.pl {
+  padding-left: 70px;
+}
