@@ -206,7 +206,8 @@ export default function SignUp() {
     async function getAllGovernments() {
       setLoading(true);
       const res = await fetch(
-        "https://we-care-puce.vercel.app/api/v1/governorates"
+        // 
+        "https://we-care-nu-two.vercel.app/api/v1/governorates"
       );
       const data = await res.json();
       setGovernments(data.data);
@@ -221,7 +222,8 @@ export default function SignUp() {
     async function getAllCitiesBySpecificGovernment() {
       setCityLoading(true);
       const res = await fetch(
-        `https://we-care-puce.vercel.app/api/v1/governorates/${formData.governorate}/cities`
+        //
+        `https://we-care-nu-two.vercel.app/api/v1/governorates/${formData.governorate}/cities`
       );
       const data = await res.json();
       setCities(data.data);
@@ -310,7 +312,7 @@ export default function SignUp() {
       }
 
       const signupResponse = await fetch(
-        "https://we-care-puce.vercel.app/api/v1/nurseAuth/signup",
+        "https://we-care-nu-two.vercel.app/api/v1/nurseAuth/signup",
         {
           method: "POST",
           body: formDataToSend,
@@ -334,7 +336,8 @@ export default function SignUp() {
 
       // Perform email verification request here (as in the original code)
       await fetch(
-        "https://we-care-puce.vercel.app/api/v1/nurseAuth/emailVerification/",
+        //
+        "https://we-care-nu-two.vercel.app/api/v1/nurseAuth/emailVerification/",
         {
           method: "POST",
           headers: {
@@ -358,7 +361,7 @@ export default function SignUp() {
     try {
       setSubmitting(true);
       const verificationResponse = await fetch(
-        "https://we-care-puce.vercel.app/api/v1/nurseAuth/verifyEmailVerificationCode/",
+        "https://we-care-nu-two.vercel.app/api/v1/nurseAuth/verifyEmailVerificationCode/",
         {
           method: "POST",
           headers: {
